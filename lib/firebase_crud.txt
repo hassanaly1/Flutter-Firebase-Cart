@@ -1,0 +1,48 @@
+ // FirebaseFirestore firestore = FirebaseFirestore.instance;
+
+Firebase works on documents. 1 single entity is document, collective document is collection. 
+ // -------------------------------------------------------------
+
+ // fetch/get all the records in FireStore
+QuerySnapshot is not itself a data, data QuerySnapshot k ander hota hai.
+ // QuerySnapshot snapshot =
+ //     await _firestore.collection("users").get();
+
+	
+	//to get all data
+ // for (var doc in snapshot.docs) {
+ //   debugPrint(doc.data().toString());
+ // }
+
+	//to get specific data
+
+ // DocumentSnapshot snapshot = await _firestore
+ //     .collection("users")
+ //     .doc('0oFIbCqPcNU6kFQUtAwE')
+ //     .get();
+
+ // debugPrint(snapshot.data().toString());
+
+ // -------------------------------------------------------------
+
+ // Add data in FireStore
+The data you add in firestore is in Map format.
+ // Map<String, dynamic> newUserData = {
+ //   "name": "Hasnain",
+ //   "email": "hasnain@gmail.com"
+ // };
+ // await firestore.collection("users").add(newUserData);
+ // debugPrint('New User Added!');
+ // await firestore.collection("users").doc('my-id').set(newUserData); //if we want to set the id by ourself. 
+ // debugPrint('New User Added with id given by us!');
+ // -------------------------------------------------------------
+ // Update data in FireStore
+ // await firestore.collection("users").doc('my-id').update(
+ //{"email": "hasnainirfan@gmail.com"}
+ //);
+ // debugPrint('User Updated!');
+ // -------------------------------------------------------------
+ // Delete data in FireStore
+ // await firestore.collection("users").doc('my-id').delete();
+ // debugPrint('User Deleted!');
+ // -------------------------------------------------------------
